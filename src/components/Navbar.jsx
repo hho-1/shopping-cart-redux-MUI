@@ -1,4 +1,4 @@
-import { AppBar, Box, Toolbar, Typography } from '@mui/material'
+import { AppBar, Badge, Box, Toolbar, Typography } from '@mui/material'
 import React from 'react'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import { Link } from 'react-router-dom';
@@ -16,8 +16,11 @@ const Navbar = () => {
             <Link to="/" className='navLink'>Habip Online Market</Link>
           </Typography>
           <Link to="/cart" className='navLink rightNav'>
-            <ShoppingCartOutlinedIcon className='items-icon'/>
-            <p className='quantity-number'>{quantity}</p>
+            {/* <ShoppingCartOutlinedIcon className='items-icon'/>
+            <p className='quantity-number'>{quantity}</p> */}
+            <Badge badgeContent={quantity} color='secondary'>
+              <ShoppingCartOutlinedIcon/>
+            </Badge>
           </Link>
           
         </Toolbar>
