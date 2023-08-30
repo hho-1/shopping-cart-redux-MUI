@@ -1,0 +1,101 @@
+@import '@fontsource/roboto/300.css';
+@import '@fontsource/roboto/400.css';
+@import '@fontsource/roboto/500.css';
+@import '@fontsource/roboto/700.css';
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Roboto;
+    background-color: beige;
+}
+.navLink{
+    color: white;
+    text-decoration: none;
+}
+.rightNav{
+    position: relative;
+}
+.items-icon{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 1.4rem;
+}
+.quantity-number{
+    background-color: red;
+    width: 18px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.productGrid{
+    
+    margin-top: 30px;
+}
+.card{
+    position: relative;
+    margin-left: 20px;
+    border: white;
+    
+}
+.cardBottom{
+    position: absolute;
+    bottom: 0px;
+}
+.addToCartButton{
+    position: absolute;
+    left: 280px;
+    cursor: pointer;
+}
+.emptyCartWarning{
+    text-align: center;
+    margin-top: 150px;
+}
+.cartContainer{
+    display: block;
+}
+.cartContainerGrid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cont{
+    margin-bottom: 50px;
+}
+.CartBottomCard{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+}
+.increaseDecreaseButtons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+.removeItemButton{
+    position: absolute;
+    left: 80px;
+    cursor: pointer;
+}
+.cartSummaryDiv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+}
+.dolarIsareti{
+    color: #888888;
+    font-size: 3rem;
+}
+.toplamTutar{
+    color: red;
+}
