@@ -10,7 +10,7 @@ const initialState = {
         return {...object, quantity: 0}                //Datada quantity olmadigi icin her kaleme bunu ekliyoruz.
     }),
     cartItems: [],
-    quantity: 0,
+    //quantity: 0,
     total:0
 }
 
@@ -20,12 +20,14 @@ const cartSlice = createSlice({
     initialState,
     reducers:{
         addToCart:(state, action) => {
-            const product = state.products.find((item) => item.id === action.payload)
             
+            const product = state.products.find((item) => item.id === action.payload)
+
             if(!(state.cartItems.some((cartItem) => cartItem.id === product.id))){
             
                 state.cartItems.push(product)
                 product.quantity += 1; 
+                
             }
             else{
                 <Alert severity="warning">
@@ -37,12 +39,14 @@ const cartSlice = createSlice({
         },
     
         clearCart:(state) => {
-            state.cartItems = []
+            state.cartItems = [];
+            products.quantity = 0
         },
         removeItem: (state, action) => {
-            // console.log(action.payload);
+            
             const itemId = action.payload;
             state.cartItems = state.cartItems.filter((item) => item.id !== itemId);
+            console.log("Carttan silindi");
         },
         increase:(state, action) => {
             const cartItem = state.cartItems.find((item) => item.id === action.payload)
