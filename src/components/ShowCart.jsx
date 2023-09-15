@@ -23,7 +23,7 @@ const ShowCart = ({id, title, price, image, quantity}) => {
       <Grid item={true} sm={12} md={6} lg={4} className='productGrid'>
       <Card className='card' sx={{ height:'650px', maxWidth:'370px', marginTop:'40px'}}>
         <CardMedia
-          sx={{ height: '400px', maxWidth:'300px', objectFit:'fill', marginLeft:'35px'}}
+          sx={{ height: '400px', maxWidth:'300px', objectFit:'fill', marginLeft:'22px'}}
           image={image}
           title="productImage"
         />
