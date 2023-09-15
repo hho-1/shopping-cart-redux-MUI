@@ -20,15 +20,15 @@ const ShowCart = ({id, title, price, image, quantity}) => {
     }
 
     return (
-      <Grid sm={12} md={6} lg={4} className='productGrid'>
-      <Card className='card' sx={{ height:'650px', maxWidth:'370px' }}>
+      <Grid item={true} sm={12} md={6} lg={4} className='productGrid'>
+      <Card className='card' sx={{ height:'650px', maxWidth:'370px', marginTop:'40px'}}>
         <CardMedia
           sx={{ height: '400px', maxWidth:'300px', objectFit:'fill', marginLeft:'35px'}}
           image={image}
           title="productImage"
         />
         <CardContent>
-          <Typography sx={{display:'flex', justifyContent:'space-between', alignItems:'center'}}>
+          <Typography component={'span'} sx={{display:'flex', justifyContent:'space-between', alignItems:'center'}}>
               <Typography gutterBottom variant="h6" component="div">
                   {title}
               </Typography>

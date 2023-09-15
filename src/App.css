@@ -50,8 +50,11 @@ body{
 }
 .addToCartButton{
     position: absolute;
-    left: 280px;
+    left: 250px;
     cursor: pointer;
+}
+.addToCartButton:hover button{
+    color: red;
 }
 .emptyCartWarning{
     text-align: center;
@@ -98,4 +101,11 @@ body{
 }
 .toplamTutar{
     color: red;
+}
+.shoppingCartNavbar{
+    transition: all .5s;
+}
+.shoppingCartNavbar:hover{
+    scale: 1.2;
+    color: yellow;
 }

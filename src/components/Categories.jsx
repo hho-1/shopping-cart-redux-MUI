@@ -35,7 +35,7 @@ const Categories = () => {
         </FormControl>
         <Container>
         <Grid className='cartContainerGrid cont' container rowSpacing={3} columnSpacing={{ sm: 2, md: 3, lg: 3 }}>
-        {
+          {
             isFiltered ? (
               products.filter((product) => {
                 return product.category === buttonName;
@@ -46,11 +46,11 @@ const Categories = () => {
               return <Show key={index} {...product}/>
   
               })
-          )
+            )
             
             
-        }    
-      </Grid>
+          }    
+        </Grid>
       </Container>
     </div>
     

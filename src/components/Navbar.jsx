@@ -18,7 +18,7 @@ const Navbar = () => {
           <Link to="/cart" className='navLink rightNav'>
             {/* <ShoppingCartOutlinedIcon className='items-icon'/>
             <p className='quantity-number'>{quantity}</p> */}
-            <Badge badgeContent={quantity} color='secondary'>
+            <Badge badgeContent={quantity} color='secondary' className='shoppingCartNavbar'>
               <ShoppingCartOutlinedIcon/>
             </Badge>
           </Link>

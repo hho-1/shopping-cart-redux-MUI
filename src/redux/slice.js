@@ -7,7 +7,7 @@ import { Alert, AlertTitle } from "@mui/material";
 
 const initialState = {
     products: products.map((object) => {
-        return {...object, quantity: 0}
+        return {...object, quantity: 0}                //Datada quantity olmadigi icin her kaleme bunu ekliyoruz.
     }),
     cartItems: [],
     quantity: 0,
@@ -30,7 +30,7 @@ const cartSlice = createSlice({
             else{
                 <Alert severity="warning">
                     <AlertTitle>Warning</AlertTitle>
-                    This is a warning alert — <strong>check it out!</strong>
+                    You have <strong>already added</strong> this product to the cart!
                 </Alert>
             }
             
