@@ -17,18 +17,6 @@ function App() {
   }, [cartItems, dispatch])
 
   
-  /* const urunler = veri.map((object) => {
-    return {...object, quantity: 0}
-  }) */
-  
-  
-
-  /* useEffect(() => {
-    createNewProducts()
-  }, []) */
-  
-  
-  
 
   return (
     <div className="App">
