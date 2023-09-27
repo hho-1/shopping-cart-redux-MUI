@@ -6,9 +6,7 @@ import { Alert, AlertTitle } from "@mui/material";
 
 
 const initialState = {
-    products: products.map((object) => {
-        return {...object, quantity: 0}                //Datada quantity olmadigi icin her kaleme bunu ekliyoruz.
-    }),
+    products: products,
     cartItems: [],
     //quantity: 0,
     total:0
@@ -25,15 +23,17 @@ const cartSlice = createSlice({
 
             if(!(state.cartItems.some((cartItem) => cartItem.id === product.id))){
             
-                state.cartItems.push(product)
-                product.quantity += 1; 
+                //product.quantity += 1;
+                state.cartItems.push({...product, quantity : 1} )
+                 
                 
             }
             else{
-                <Alert severity="warning">
+                {/* <Alert severity="warning">
                     <AlertTitle>Warning</AlertTitle>
                     You have <strong>already added</strong> this product to the cart!
-                </Alert>
+                </Alert> */}
+                alert("You have already added this product to the cart!")
             }
             
         },
@@ -44,9 +44,9 @@ const cartSlice = createSlice({
         },
         removeItem: (state, action) => {
             
-            const itemId = action.payload;
-            state.cartItems = state.cartItems.filter((item) => item.id !== itemId);
-            console.log("Carttan silindi");
+            //const itemId = action.payload;
+            state.cartItems = state.cartItems.filter((item) => item.id !== action.payload);
+            
         },
         increase:(state, action) => {
             const cartItem = state.cartItems.find((item) => item.id === action.payload)

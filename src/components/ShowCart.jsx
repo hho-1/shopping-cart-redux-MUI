@@ -43,7 +43,7 @@ const ShowCart = ({id, title, price, image, quantity}) => {
                 <p>{quantity}</p>
                 <Button size="large" onClick={handleDecrease}><RemoveIcon/></Button>
               </div>
-              <Button onClick={()=> {dispatch(removeItem(id))}} className='removeItemButton' variant='contained' color='error'>REMOVE</Button>
+              <Button onClick={()=>dispatch(removeItem(id))} className='removeItemButton' variant='contained' color='error'>REMOVE</Button>
   
           </CardActions>
         </CardContent>
