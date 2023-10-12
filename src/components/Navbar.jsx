@@ -13,7 +13,7 @@ const Navbar = () => {
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            <Link to="/" className='navLink'>Habip Online Market</Link>
+            <Link to="/" className='navLink'>Fake Online Market</Link>
           </Typography>
           <Link to="/cart" className='navLink rightNav'>
             {/* <ShoppingCartOutlinedIcon className='items-icon'/>
