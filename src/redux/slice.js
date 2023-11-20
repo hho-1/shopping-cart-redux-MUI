@@ -1,6 +1,5 @@
 import { createSlice} from "@reduxjs/toolkit";
 import products from '../helpers/data'
-import { Alert, AlertTitle } from "@mui/material";
 
 
 
@@ -29,10 +28,7 @@ const cartSlice = createSlice({
                 
             }
             else{
-                {/* <Alert severity="warning">
-                    <AlertTitle>Warning</AlertTitle>
-                    You have <strong>already added</strong> this product to the cart!
-                </Alert> */}
+                
                 alert("You have already added this product to the cart!")
             }
             
@@ -40,7 +36,7 @@ const cartSlice = createSlice({
     
         clearCart:(state) => {
             state.cartItems = [];
-            products.quantity = 0
+            //cartItem.quantity = 0
         },
         removeItem: (state, action) => {
             
